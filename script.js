@@ -13,3 +13,15 @@ function createDivs() {
     gridContainer.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
 }
 createDivs();
+
+const gridItems = document.querySelectorAll('.grid-item');
+gridItems.forEach((item) => {
+    item.addEventListener('mouseenter', (e) => {
+        e.currentTarget.style.backgroundColor = 'orange';
+    });
+});
+// for(let i = 0; i < gridItems.length; i++) {
+//     gridItems[i].addEventListener('mouseenter', function() {
+//         gridItems[i].style.backgroundColor = 'orange';
+//     });
+// }
