@@ -41,6 +41,9 @@ resetBtn.addEventListener('click', () => {
 
     createNewGrid(gridNumber);
     colorMode = 'black';
+    randomColorBtn.style.backgroundColor = null;
+    blackColorBtn.style.backgroundColor = 'orange';
+    eraseBtn.style.backgroundColor = null;
 
 });
 
