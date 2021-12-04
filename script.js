@@ -10,6 +10,9 @@ function init(){
 init();
 
 function createNewGrid(gridNumber) {
+
+    document.querySelector('.grid-container').innerHTML = "";
+
     const gridContainer = document.querySelector('.grid-container');
 
     for (let i = 0; i < gridNumber * gridNumber; i++) {
@@ -41,11 +44,6 @@ resetBtn.addEventListener('click', () => {
     } else if (gridNumber === null) {
         return;
     }
-
-    let removeGrid = document.querySelectorAll('.grid-item')
-    removeGrid.forEach((item) => {
-        item.remove();
-    });
 
     createNewGrid(gridNumber);
     colorMode = 'black';
