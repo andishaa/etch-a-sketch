@@ -1,5 +1,7 @@
 let gridNumber = 16;
 let colorMode = 'black';
+let shouldDraw = false;
+
 createNewGrid(gridNumber);
 
 function createNewGrid() {
@@ -39,10 +41,22 @@ resetBtn.addEventListener('click', () => {
 
 });
 
+const gridContainer = document.querySelector('.grid-container');
+gridContainer.addEventListener('mousedown', () => {
+    shouldDraw = true;
+});
+const body = document.querySelector('body');
+body.addEventListener('mouseup', () => {
+    shouldDraw = false;
+});
+
 function fillColor() {
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
+            if (!shouldDraw) {
+                return;
+            }
             if (colorMode === 'black') {
                 if (e.currentTarget.style.backgroundColor !== 'black') {
                     e.currentTarget.style.opacity = 0;
@@ -66,14 +80,26 @@ function fillColor() {
 const randomColorBtn = document.querySelector('.randomColorBtn');
 randomColorBtn.addEventListener('click', () => {
     colorMode = 'randomColor';
+    randomColorBtn.style.backgroundColor = 'orange';
+    blackColorBtn.style.backgroundColor = null;
+    eraseBtn.style.backgroundColor = null;
+
 })
 
 const blackColorBtn = document.querySelector('.blackColorBtn');
 blackColorBtn.addEventListener('click', () => {
     colorMode = 'black';
+    blackColorBtn.style.backgroundColor = 'orange';
+    eraseBtn.style.backgroundColor = null;
+    randomColorBtn.style.backgroundColor = null;
+
 })
 
 const eraseBtn = document.querySelector('.eraseBtn');
 eraseBtn.addEventListener('click', () => {
     colorMode = 'erase';
+    eraseBtn.style.backgroundColor = 'orange';
+    blackColorBtn.style.backgroundColor = null;
+    randomColorBtn.style.backgroundColor = null;
+
 })
