@@ -46,3 +46,9 @@ body {
 .grid-item {
     background-color: #ffffff;
 }
+
+.gridStatus {
+    font-style: bold;
+    color: orange;
+    text-align: center;
+}

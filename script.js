@@ -16,6 +16,9 @@ function createNewGrid() {
     gridContainer.style.gridTemplateColumns = `repeat(${gridNumber}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${gridNumber}, 1fr)`;
 
+    const gridStatus = document.querySelector('.gridStatus');
+    gridStatus.textContent = `Chosen grid: ${gridNumber} x ${gridNumber}`;
+
     fillColor();
 }
 
@@ -75,7 +78,7 @@ function fillColor() {
             }
         });
     });
-}
+};
 
 const randomColorBtn = document.querySelector('.randomColorBtn');
 randomColorBtn.addEventListener('click', () => {
@@ -84,7 +87,7 @@ randomColorBtn.addEventListener('click', () => {
     blackColorBtn.style.backgroundColor = null;
     eraseBtn.style.backgroundColor = null;
 
-})
+});
 
 const blackColorBtn = document.querySelector('.blackColorBtn');
 blackColorBtn.addEventListener('click', () => {
@@ -93,7 +96,7 @@ blackColorBtn.addEventListener('click', () => {
     eraseBtn.style.backgroundColor = null;
     randomColorBtn.style.backgroundColor = null;
 
-})
+});
 
 const eraseBtn = document.querySelector('.eraseBtn');
 eraseBtn.addEventListener('click', () => {
@@ -102,4 +105,4 @@ eraseBtn.addEventListener('click', () => {
     blackColorBtn.style.backgroundColor = null;
     randomColorBtn.style.backgroundColor = null;
 
-})
+});
