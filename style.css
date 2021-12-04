@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-.buttons {
+.menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,21 +27,18 @@ body {
     gap: 10px;
 }
 
-.resetBtn, 
-.randomColorBtn,
-.blackColorBtn,
-.eraseBtn {
+.menu button{
     font-size: 20px;
     font-weight: bold;
     padding: 5px 15px 5px 15px;
     border-radius: 10px;
 }
 
-button:hover {
+.menu button:hover {
     background-color: rgb(119, 0, 199);
 }
 
-button:active {
+.menu button:active {
     background-color: orange;;
 }
 
