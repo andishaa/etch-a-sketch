@@ -15,7 +15,7 @@ function init() {
 init();
 
 function initMenu() {
-    const resetBtn = document.querySelector('.resetBtn');
+    const resetBtn = document.querySelector('#resetBtn');
 
     resetBtn.addEventListener('click', () => {
 
@@ -32,7 +32,7 @@ function initMenu() {
         initGrid(gridSize);
     });
 
-    const randomColorBtn = document.querySelector('.randomColorBtn');
+    const randomColorBtn = document.querySelector('#randomColorBtn');
     randomColorBtn.addEventListener('click', () => {
         colorMode = ColorModes.RANDOM;
         randomColorBtn.style.backgroundColor = 'orange';
@@ -41,7 +41,7 @@ function initMenu() {
 
     });
 
-    const blackColorBtn = document.querySelector('.blackColorBtn');
+    const blackColorBtn = document.querySelector('#blackColorBtn');
     blackColorBtn.addEventListener('click', () => {
         colorMode = ColorModes.BLACK;
         blackColorBtn.style.backgroundColor = 'orange';
@@ -50,7 +50,7 @@ function initMenu() {
 
     });
 
-    const eraseBtn = document.querySelector('.eraseBtn');
+    const eraseBtn = document.querySelector('#eraseBtn');
     eraseBtn.addEventListener('click', () => {
         colorMode = ColorModes.ERASE;
         eraseBtn.style.backgroundColor = 'orange';
@@ -75,7 +75,7 @@ function initGrid(gridSize) {
     gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-    const gridStatus = document.querySelector('.gridStatus');
+    const gridStatus = document.querySelector('#gridStatus');
     gridStatus.textContent = `Chosen grid: ${gridSize} x ${gridSize}`;
 
     setUpDrawingEngin();
@@ -84,9 +84,9 @@ function initGrid(gridSize) {
 function resetDefaults() {
     colorMode = ColorModes.BLACK;
 
-    const randomColorBtn = document.querySelector('.randomColorBtn');
-    const blackColorBtn = document.querySelector('.blackColorBtn');
-    const eraseBtn = document.querySelector('.eraseBtn');
+    const randomColorBtn = document.querySelector('#randomColorBtn');
+    const blackColorBtn = document.querySelector('#blackColorBtn');
+    const eraseBtn = document.querySelector('#eraseBtn');
 
     blackColorBtn.style.backgroundColor = 'orange';
     randomColorBtn.style.backgroundColor = null;

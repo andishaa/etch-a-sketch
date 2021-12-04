@@ -53,7 +53,7 @@ body {
     background-color: #ffffff;
 }
 
-.gridStatus {
+#gridStatus {
     font-style: bold;
     color: orange;
     text-align: center;
