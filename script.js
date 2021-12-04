@@ -19,6 +19,9 @@ function createNewGrid() {
     const gridStatus = document.querySelector('.gridStatus');
     gridStatus.textContent = `Chosen grid: ${gridNumber} x ${gridNumber}`;
 
+    const blackColorBtn = document.querySelector('.blackColorBtn');
+    blackColorBtn.style.backgroundColor = 'orange';
+
     fillColor();
 }
 
@@ -41,6 +44,7 @@ resetBtn.addEventListener('click', () => {
 
     createNewGrid(gridNumber);
     colorMode = 'black';
+    
     randomColorBtn.style.backgroundColor = null;
     blackColorBtn.style.backgroundColor = 'orange';
     eraseBtn.style.backgroundColor = null;
