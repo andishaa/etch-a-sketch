@@ -1,10 +1,15 @@
-let gridNumber = 16;
 let colorMode = 'black';
 let shouldDraw = false;
 
-createNewGrid(gridNumber);
 
-function createNewGrid() {
+function init(){
+    let defaultGridNumber = 16;
+    createNewGrid(defaultGridNumber);
+}
+
+init();
+
+function createNewGrid(gridNumber) {
     const gridContainer = document.querySelector('.grid-container');
 
     for (let i = 0; i < gridNumber * gridNumber; i++) {
@@ -28,7 +33,7 @@ function createNewGrid() {
 const resetBtn = document.querySelector('.resetBtn');
 
 resetBtn.addEventListener('click', () => {
-    gridNumber = window.prompt('Select new grid style (only numbers below 100):', 16);
+    let gridNumber = window.prompt('Select new grid style (only numbers below 100):', 16);
 
     if (gridNumber > 100) {
         alert('Sorry, choose number below 100')
