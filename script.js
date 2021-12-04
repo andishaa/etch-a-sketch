@@ -17,7 +17,7 @@ function createNewGrid() {
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.currentTarget.style.backgroundColor = 'orange';
+            e.currentTarget.style.backgroundColor = 'black';
         });
     });
 }
@@ -25,10 +25,12 @@ function createNewGrid() {
 const resetBtn = document.querySelector('.resetBtn');
 
 resetBtn.addEventListener('click', () => {
-    gridNumber = Number(window.prompt('Select new grid style:', 16));
+    gridNumber = window.prompt('Select new grid style (only numbers below 100):', 16);
     
     if (gridNumber > 100) {
         alert('Sorry, choose number below 100')
+        return;
+    } else if (gridNumber === null) {
         return;
     }
 
