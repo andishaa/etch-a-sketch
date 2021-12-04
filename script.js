@@ -35,6 +35,7 @@ resetBtn.addEventListener('click', () => {
     });
 
     createNewGrid(gridNumber);
+    colorMode = 'black';
 
 });
 
