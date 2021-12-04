@@ -17,7 +17,8 @@ function createNewGrid() {
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach((item) => {
         item.addEventListener('mouseenter', (e) => {
-            e.currentTarget.style.backgroundColor = 'black';
+            let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+            e.currentTarget.style.backgroundColor = randomColor;
         });
     });
 }
