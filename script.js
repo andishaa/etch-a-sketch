@@ -54,6 +54,9 @@ function fillColor() {
                 let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
                 e.currentTarget.style.backgroundColor = randomColor;
                 e.currentTarget.style.opacity = 100;
+            } else if (colorMode === 'erase') {
+                e.currentTarget.style.opacity = 100;
+                e.currentTarget.style.backgroundColor = 'white';
             }
         });
     });
@@ -67,4 +70,9 @@ randomColorBtn.addEventListener('click', () => {
 const blackColorBtn = document.querySelector('.blackColorBtn');
 blackColorBtn.addEventListener('click', () => {
     colorMode = 'black';
+})
+
+const eraseBtn = document.querySelector('.eraseBtn');
+eraseBtn.addEventListener('click', () => {
+    colorMode = 'erase';
 })
