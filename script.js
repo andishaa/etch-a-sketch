@@ -29,6 +29,7 @@ resetBtn.addEventListener('click', () => {
     
     if (gridNumber > 100) {
         alert('Sorry, choose number below 100')
+        return;
     }
 
     let removeGrid = document.querySelectorAll('.grid-item')
