@@ -33,7 +33,16 @@ body {
 .eraseBtn {
     font-size: 20px;
     font-weight: bold;
-    padding: 0px 15px 0px 15px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(119, 0, 199);
+}
+
+button:active {
+    background-color: orange;;
 }
 
 .grid-container {
